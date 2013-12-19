@@ -1,0 +1,52 @@
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden; height:133px !important;}
+#colorbox{margin-top:220px;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative; overflow:hidden;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    ColorBox example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:#111; display:none !important;}
+
+#colorBox{}
+#cboxLoadedContent{margin-bottom:0;}
+
+#gate-container {margin: 0 auto; height:155px; text-align: center; font-family: "Tahoma", Geneva, sans-serif; width: 600px; overflow:hidden;}
+#gate-container .gate-heading {padding-top: 100px; color: #666; font-size: 18px; line-height: 24px; letter-spacing: -1px;}
+#gate-container .gate-subheading {padding-top: 5px; color: #666; font-size: 11px; text-align: justify;}
+#gate-container .gatedenied {color: #660000; padding:10px 0 35px 0;}
+#gate-container a{color: #000;}
+#gate-container a:hover{color: #ccc;text-decoration: none;}
+
+
+form#gate-box {margin: 5px 0 0 0;}
+form#gate-box .gate-boxselect {width:155px; padding:1px; margin:0 2px;}
+form#gate-box .gate-boxinput {width:100px; padding:1px; margin:0 2px;}
+form#gate-box .submit {
+margin: 2px 0 0 0;
+border: none;
+background:none;
+text-transform: uppercase;
+cursor: pointer;
+font: 24px/30px "BertholdExtended","Helvetica Neue","Helvetica",Arial;
+text-shadow: 0 1px 0 #FFFFFF;
+}
+form#gate-box .submit:hover {
+color:#305078;
+}
+
+#newagegatecontainer{position:relative;}
+#gate-container h3{font-size: 22px; text-align: center; font-weight:normal !important; margin: 0 0 5px;	color: #222222;}

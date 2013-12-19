@@ -1,0 +1,400 @@
+
+<div id="gate-container">
+
+<!-- BEGIN TOP CONTENT -->
+<div class="gate-heading">We want to be sure our products are enjoyed responsibly, so please confirm you are above the legal drinking age before you enter our site.</div>
+<!-- END TOP CONTENT -->
+
+<!-- BEGIN ERROR MESSAGE SCRIPT -->
+<script type="text/javascript">
+$.msg = function(text, style)
+{
+	/*style = style || 'gatedenied';
+	$('<div>')
+	  .attr('class', style)*/
+	  //.html(text)
+	  alert(text);
+	  /*.insertAfter($('.gate-subheading'))
+	  .fadeIn('slow')
+	  .animate({opacity: 1.0}, 3000)     //<== wait 3 seconds before fading out
+	  .fadeOut('slow', function()
+	  {
+	        $(this).remove();
+	  });*/
+};
+</script>
+<!-- END ERROR MESSAGE SCRIPT -->
+
+<!-- BEGIN GEOLOCATION SCRIPT -->
+<!-- If geolocation logic is desired it can be placed here -->
+<!-- END GEOLOCATION SCRIPT -->
+
+<!-- BEGIN COOKIE SCRIPT -->
+<script type="text/javascript">
+$("#gate-box").submit(function(){
+	
+	if (($("#day").val() == '0') || ($("#month").val() == '0') || ($("#year").val() == '0')){
+		alert('Invalid Date: Please enter a valid date');
+	}else if ($('#terms').is(':checked')==false){
+		alert('Please agree to the Terms and Conditions and Privacy & Cookie Notice');
+	}else {
+
+		var day = $("#day").val();
+		var month = $("#month").val();
+		var year = $("#year").val();
+
+		switch ($('#country').val()) {  
+
+		   case "0":  var age = -1; break;
+		   case "AL":  var age = 21; break;
+		   case "AD":  var age = 21; break;
+		   case "AU":  var age = 21; break;
+		   case "AT":  var age = 21; break;
+		   case "BY":  var age = 21; break;
+		   case "BE":  var age = 21; break;
+		   case "BA":  var age = 21; break;
+		   case "BG":  var age = 21; break;
+		   case "CA":  var age = 21; break;
+		   case "HR":  var age = 21; break;
+		   case "CY":  var age = 21; break;
+		   case "CZ":  var age = 21; break;
+		   case "DK":  var age = 21; break;
+		   case "EE":  var age = 21; break;
+		   case "FI":  var age = 21; break;
+		   case "FR":  var age = 21; break;
+		   case "DE":  var age = 21; break;
+		   case "GR":  var age = 21; break;
+		   case "HU":  var age = 21; break;
+		   case "IS":  var age = 21; break;
+		   case "IE":  var age = 21; break;
+		   case "IT":  var age = 21; break;
+		   case "LV":  var age = 21; break;
+		   case "LI":  var age = 21; break;
+		   case "LT":  var age = 21; break;
+		   case "LU":  var age = 21; break;
+		   case "MK":  var age = 21; break;
+		   case "MT":  var age = 21; break;
+		   case "MX":  var age = 21; break;
+		   case "MD":  var age = 21; break;
+		   case "MC":  var age = 21; break;
+		   case "MN":  var age = 21; break;
+		   case "NL":  var age = 21; break;
+		   case "NO":  var age = 21; break;
+		   case "PL":  var age = 21; break;
+		   case "RO":  var age = 21; break;
+		   case "RU":  var age = 21; break;
+		   case "SM":  var age = 21; break;
+		   case "ST":  var age = 21; break;
+		   case "SE":  var age = 21; break;
+		   case "SI":  var age = 21; break;
+		   case "SA":  var age = 21; break;
+		   case "ES":  var age = 21; break;
+		   case "SE":  var age = 21; break;
+		   case "CH":  var age = 21; break;
+		   case "TW":  var age = 21; break;
+		   case "TR":  var age = 21; break;
+		   case "UA":  var age = 21; break;
+		   case "GB":  var age = 21; break;
+		   case "US":  var age = 21; break;
+		   default: var age = 21; break;
+		}
+
+		var mydate = new Date();
+		mydate.setFullYear(year, month-1, day);
+
+		var currdate = new Date();
+		currdate.setFullYear(currdate.getFullYear() - age);
+		if ((currdate - mydate) < 0){
+			//$.msg("Sorry, you must be at least " + age + " to enter.")
+			$('.index').css('display','none');
+			switch ($('#country').val()) {
+				case "AT":  window.location = 'http://www.drinkwise.com.au'; break;
+				case "CA":  window.location = 'http://www.educalcool.qc.ca'; break;
+				case "CZ":  window.location = 'http://www.forum-psr.cz'; break;
+				case "DK":  window.location = 'http://www.goda.dk'; break;
+				case "FR":  window.location = 'http://www.ep.soifdevivre.com'; break;
+				case "HU":  window.location = 'http://www.hafrac.com'; break;
+				case "IE":  window.location = 'http://www.meas.ie'; break;
+				case "MT":  window.location = 'http://www.thesensegrouponline.org'; break;
+				case "MX":  window.location = 'http://www.alcoholinformate.org.mx'; break;
+				case "NL":  window.location = 'http://www.stiva.nl'; break;
+				case "SA":  window.location = 'http://www.ara.co.za'; break;
+				case "ES":  window.location = 'http://www.alcoholysociedad.org'; break;
+				case "TW":  window.location = 'http://www.tbaf.org.tw'; break;
+				case "GB":  window.location = 'http://www.drinkaware.co.uk'; break;
+				case "UNITED STATES":  window.location = 'http://www.centurycouncil.org'; break;
+				default: window.location = 'http://www.efrd.org/'; break;
+			}
+			return false;
+		} else if(age==0){
+			$.msg("Sorry, we are unable to allow you access to our web site.");
+		} else if(age==-1){
+			$.msg("Sorry, we are unable to allow you access to our web site. Please select country.");
+		}
+		else if((currdate - mydate) >= 0){
+			$.colorbox.close()
+			//$.setCookie( 'diageoagecheck', 'verified', {duration:3});
+			$.setCookie( 'age', 'permissible', {duration:3});
+			LoadURLHash();
+			$('#agegate').css('display','none');
+		}
+	}
+return false;
+});
+</script>
+<!-- END COOKIE SCRIPT -->
+<h3 style="font-weight: normal;">Please enter your date of birth to continue.</h3>
+<form method="post" id="gate-box">
+
+	<!--select name="items[language]" id="language" class="gate-boxselect" tabindex="1">
+		<option selected="selected" value="">Select your language</option>
+		<option value="en">English</option>
+		<option value="bg">Bulgarian</option>
+		<option value="nl">Dutch</option>
+		<option value="fr">French</option>
+		<option value="el">Greek</option>
+		<option value="ko">Korean</option>
+		<option value="pl">Polish</option>
+		<option value="pt">Portuguese</option>
+		<option value="ro">Romanian</option>
+		<option value="ru">Russian</option>
+		<option value="es">Spanish</option>
+		<option value="th">Thai</option>
+		<option value="tr">Turkish</option>
+	</select-->
+
+	<select name="items[country]" id="country" class="gate-boxselect" tabindex="2">
+<option value="AL">ALBANIA</option>
+<option value="AD">ANDORRA</option>
+<option value="AU">AUSTRALIA</option>
+<option value="AT">AUSTRIA</option>
+<option value="BY">BELARUS</option>
+<option value="BE">BELGIUM</option>
+<option value="BA">BOSNIA &amp; HERZEGOVINA</option>
+<option value="BG">BULGARIA</option>
+<option value="CA">CANADA</option>
+<option value="HR">CROATIA</option>
+<option value="CY">CYPRUS</option>
+<option value="CZ">CZECH REPUBLIC</option>
+<option value="DK">DENMARK</option>
+<option value="EE">ESTONIA</option>
+<option value="FI">FINLAND</option>
+<option value="FR">FRANCE</option>
+<option value="DE">GERMANY</option>
+<option value="GR">GREECE</option>
+<option value="HU">HUNGARY</option>
+<option value="IS">ICELAND</option>
+<option value="IE">IRELAND</option>
+<option value="IT">ITALY</option>
+<option value="LV">LATVIA</option>
+<option value="LI">LIECHTENSTEIN</option>
+<option value="LT">LITHUANIA</option>
+<option value="LU">LUXEMBURG</option>
+<option value="MK">MACEDONIA</option>
+<option value="MT">MALTA</option>
+<option value="MX">MEXICO</option>
+<option value="MD">MOLDOVA</option>
+<option value="MC">MONACO</option>
+<option value="MN">MONTENEGRO</option>
+<option value="NL">NETHERLANDS</option>
+<option value="NO">NORWAY</option>
+<option value="PL">POLAND</option>
+<option value="RO">ROMANIA</option>
+<option value="RU">RUSSIA</option>
+<option value="SM">SAN MARINO</option>
+<option value="ST">SCOTLAND</option>
+<option value="SE">SERBIA</option>
+<option value="SI">SLOVENIA</option>
+<option value="SA">SOUTH AFRICA</option>
+<option value="ES">SPAIN</option>
+<option value="SE">SWEDEN</option>
+<option value="CH">SWITZERLAND</option>
+<option value="TW">TAIWAN</option>
+<option value="TR">TURKEY</option>
+<option value="UA">UKRAINE</option>
+<option value="GB">UNITED KINGDOM</option>
+<option value="US" selected="selected">UNITED STATES</option>
+<option value="0">All Other Countries</option>
+</select>
+	
+	<select name="items[month]" id="month" class="gate-boxinput" tabindex="3">
+	    <option value="0" label="-Month-">-Month-</option>
+		<option value="1" label="January">January</option>
+	    <option value="2" label="February">February</option>
+	    <option value="3" label="March">March</option>
+	    <option value="4" label="April">April</option>
+	    <option value="5" label="May">May</option>
+	    <option value="6" label="June">June</option>
+	    <option value="7" label="July">July</option>
+	    <option value="8" label="August">August</option>
+	    <option value="9" label="September">September</option>
+	    <option value="10" label="October">October</option>
+	    <option value="11" label="November">November</option>
+	    <option value="12" label="December">December</option>
+	</select>
+	
+	<select name="items[day]" id="day" class="gate-boxinput" tabindex="4">
+	    <option value="0" label="-Day-">-Day-</option>
+		<option value="1" label="1">1</option>
+	    <option value="2" label="2">2</option>
+	    <option value="3" label="3">3</option>
+	    <option value="4" label="4">4</option>
+	    <option value="5" label="5">5</option>
+	    <option value="6" label="6">6</option>
+	    <option value="7" label="7">7</option>
+	    <option value="8" label="8">8</option>
+	    <option value="9" label="9">9</option>
+	    <option value="10" label="10">10</option>
+	    <option value="11" label="11">11</option>
+	    <option value="12" label="12">12</option>
+	    <option value="13" label="13">13</option>
+	    <option value="14" label="14">14</option>
+	    <option value="15" label="15">15</option>
+	    <option value="16" label="16">16</option>
+	    <option value="17" label="17">17</option>
+	    <option value="18" label="18">18</option>
+	    <option value="19" label="19">19</option>
+	    <option value="20" label="20">20</option>
+	    <option value="21" label="21">21</option>
+	    <option value="22" label="22">22</option>
+	    <option value="23" label="23">23</option>
+	    <option value="24" label="24">24</option>
+	    <option value="25" label="25">25</option>
+	    <option value="26" label="26">26</option>
+	    <option value="27" label="27">27</option>
+	    <option value="28" label="28">28</option>
+	    <option value="29" label="29">29</option>
+	    <option value="30" label="30">30</option>
+	    <option value="31" label="31">31</option>
+	</select>	
+	
+	<select name="items[year]" id="year" class="gate-boxinput" tabindex="5">
+		<option value="0" label="-Year-">-Year-</option>
+		<option value="2011" label="2011">2011</option>
+	    <option value="2010" label="2010">2010</option>
+	    <option value="2009" label="2009">2009</option>
+	    <option value="2008" label="2008">2008</option>
+	    <option value="2007" label="2007">2007</option>
+	    <option value="2006" label="2006">2006</option>
+	    <option value="2005" label="2005">2005</option>
+	    <option value="2004" label="2004">2004</option>
+	    <option value="2003" label="2003">2003</option>
+	    <option value="2002" label="2002">2002</option>
+	    <option value="2001" label="2001">2001</option>
+	    <option value="2000" label="2000">2000</option>
+	    <option value="1999" label="1999">1999</option>
+	    <option value="1998" label="1998">1998</option>
+	    <option value="1997" label="1997">1997</option>
+	    <option value="1996" label="1996">1996</option>
+	    <option value="1995" label="1995">1995</option>
+	    <option value="1994" label="1994">1994</option>
+	    <option value="1993" label="1993">1993</option>
+	    <option value="1992" label="1992">1992</option>
+	    <option value="1991" label="1991">1991</option>
+	    <option value="1990" label="1990">1990</option>
+	    <option value="1989" label="1989">1989</option>
+	    <option value="1988" label="1988">1988</option>
+	    <option value="1987" label="1987">1987</option>
+	    <option value="1986" label="1986">1986</option>
+	    <option value="1985" label="1985">1985</option>
+	    <option value="1984" label="1984">1984</option>
+	    <option value="1983" label="1983">1983</option>
+	    <option value="1982" label="1982">1982</option>
+	    <option value="1981" label="1981">1981</option>
+	    <option value="1980" label="1980">1980</option>
+	    <option value="1979" label="1979">1979</option>
+	    <option value="1978" label="1978">1978</option>
+	    <option value="1977" label="1977">1977</option>
+	    <option value="1976" label="1976">1976</option>
+	    <option value="1975" label="1975">1975</option>
+	    <option value="1974" label="1974">1974</option>
+	    <option value="1973" label="1973">1973</option>
+	    <option value="1972" label="1972">1972</option>
+	    <option value="1971" label="1971">1971</option>
+	    <option value="1970" label="1970">1970</option>
+	    <option value="1969" label="1969">1969</option>
+	    <option value="1968" label="1968">1968</option>
+	    <option value="1967" label="1967">1967</option>
+	    <option value="1966" label="1966">1966</option>
+	    <option value="1965" label="1965">1965</option>
+	    <option value="1964" label="1964">1964</option>
+	    <option value="1963" label="1963">1963</option>
+	    <option value="1962" label="1962">1962</option>
+	    <option value="1961" label="1961">1961</option>
+	    <option value="1960" label="1960">1960</option>
+	    <option value="1959" label="1959">1959</option>
+	    <option value="1958" label="1958">1958</option>
+	    <option value="1957" label="1957">1957</option>
+	    <option value="1956" label="1956">1956</option>
+	    <option value="1955" label="1955">1955</option>
+	    <option value="1954" label="1954">1954</option>
+	    <option value="1953" label="1953">1953</option>
+	    <option value="1952" label="1952">1952</option>
+	    <option value="1951" label="1951">1951</option>
+	    <option value="1950" label="1950">1950</option>
+	    <option value="1949" label="1949">1949</option>
+	    <option value="1948" label="1948">1948</option>
+	    <option value="1947" label="1947">1947</option>
+	    <option value="1946" label="1946">1946</option>
+	    <option value="1945" label="1945">1945</option>
+	    <option value="1944" label="1944">1944</option>
+	    <option value="1943" label="1943">1943</option>
+	    <option value="1942" label="1942">1942</option>
+	    <option value="1941" label="1941">1941</option>
+	    <option value="1940" label="1940">1940</option>
+	    <option value="1939" label="1939">1939</option>
+	    <option value="1938" label="1938">1938</option>
+	    <option value="1937" label="1937">1937</option>
+	    <option value="1936" label="1936">1936</option>
+	    <option value="1935" label="1935">1935</option>
+	    <option value="1934" label="1934">1934</option>
+	    <option value="1933" label="1933">1933</option>
+	    <option value="1932" label="1932">1932</option>
+	    <option value="1931" label="1931">1931</option>
+	    <option value="1930" label="1930">1930</option>
+	    <option value="1929" label="1929">1929</option>
+	    <option value="1928" label="1928">1928</option>
+	    <option value="1927" label="1927">1927</option>
+	    <option value="1926" label="1926">1926</option>
+	    <option value="1925" label="1925">1925</option>
+	    <option value="1924" label="1924">1924</option>
+	    <option value="1923" label="1923">1923</option>
+	    <option value="1922" label="1922">1922</option>
+	    <option value="1921" label="1921">1921</option>
+	    <option value="1920" label="1920">1920</option>
+		<option value="1919" label="1919">1919</option>
+		<option value="1918" label="1918">1918</option>
+		<option value="1917" label="1917">1917</option>
+		<option value="1916" label="1916">1916</option>
+		<option value="1915" label="1915">1915</option>
+		<option value="1914" label="1914">1914</option>
+		<option value="1913" label="1913">1913</option>
+		<option value="1912" label="1912">1912</option>
+		<option value="1911" label="1911">1911</option>
+		<option value="1910" label="1910">1910</option>
+		<option value="1909" label="1909">1909</option>
+		<option value="1908" label="1908">1908</option>
+		<option value="1907" label="1907">1907</option>
+		<option value="1906" label="1906">1906</option>
+		<option value="1905" label="1905">1905</option>
+		<option value="1904" label="1904">1904</option>
+		<option value="1903" label="1903">1903</option>
+		<option value="1902" label="1902">1902</option>
+		<option value="1901" label="1901">1901</option>
+		<option value="1900" label="1900">1900</option>	    
+	</select>
+<br>
+<img src="img/index/celebrate.png" alt="C&#206;ROC&reg; Ultra Premium">
+<br />
+	<input type="checkbox" name="terms" id="terms" value="terms & conditions" checked="yes"> By entering this site you agree to our Terms and Conditions and Privacy &amp; Cookie Notice<br>
+    <!--a href="javascript:void(0);" onclick="ValidateDate();" >SUBMIT</a-->
+	<input type="submit" name="submit" class="submit" value="SUBMIT" tabindex="6" />
+</form>
+
+
+<!-- BEGIN FOOTER CONTENT -->
+<div class="gate-subheading">By clicking enter, I accept Terms and Conditions and Privacy Policy. Please do not enter this site if you are not of legal purchase age for alcohol in your country of access. DIAGEO and its brands is a member of many organizations that promote responsible drinking. Visit the <a href="http://www.centurycouncil.org/">Century Council</a> to learn more.</div>
+<!-- END FOOTER CONTENT -->
+
+</div> <!-- end DIV gate-container -->
+

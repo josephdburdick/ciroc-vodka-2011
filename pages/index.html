@@ -1,0 +1,114 @@
+<div id='mediaspace'></div>
+<a href="#!/mixology-cocktails" class="btn-video-close"></a>
+
+
+<script type="text/javascript">
+jwplayer("mediaspace").setup({
+    'width': '100%',
+    'height': '100%',
+    'stretching':'fill',
+	'smoothing' :'true',
+    //'skin':'pages/videos/beelden.zip',
+    levels: [
+        {file: 'pages/videos/ciroc_snapfrost-15s.mp4', type: 'video/mp4' },
+        {file: 'pages/videos/ciroc_snapfrost-15s.ogv', type: 'video/ogv' },
+        {file: 'pages/videos/ciroc_snapfrost-15s.webm', type: 'video/webm' }
+
+    ],
+    events: {
+    	onReady: function(){
+    		jwplayer('mediaspace').play();
+    	},
+    	onComplete: function(){
+    		document.location = "#!/mixology-cocktails";
+    	}
+  	},
+    modes: [
+        //{ type: 'html5' },
+        { type: 'flash', src: 'js/libs/player.swf' }
+    ]
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!--<div height="270" width="480" id="myVideo" autoplay="autoplay">
+  <source src="pages/videos/ciroc_ratpack.mp4" type='video/mp4'>
+  <source src="pages/videos/ciroc_ratpack.webm" type='video/webm'>
+</div>
+
+<script type="text/javascript">
+  jwplayer("myVideo").setup({
+    modes: [
+        { type: 'html5' },
+        { type: 'flash', src: 'js/libs/player.swf' }
+    ]
+  });
+</script>-->
+
+<!--<video id="mediaspace" class="video-js vjs-default-skin" controls
+  preload="auto" width="100%" height="100%" data-setup="{}" autoplay="autoplay">
+  <source src="pages/videos/ciroc_ratpack.mp4" type='video/mp4'>
+  <source src="pages/videos/ciroc_ratpack.webm" type='video/webm'>
+  	
+</video>-->
+
+<!--<div id='mediaspace'></div>-->
+
+<!--<script type="text/javascript">
+  jwplayer("mediaspace").setup({
+  	'stretching':'exactfit',
+    'skin':'pages/videos/beelden.zip',
+    events: {
+    	onReady: function(){
+    		jwplayer('mediaspace').play();
+    	},
+    	onComplete: function(){
+    		document.location = "#!/mixology-cocktails";
+    	}
+  	},
+    modes: [
+        { type: 'html5' },
+        { type: 'flash', src: 'js/libs/player.swf' }
+    ],
+    
+  });
+</script>-->
+
+<!--<script type='text/javascript'>
+  jwplayer('mediaspace').setup({
+    'flashplayer': 'js/libs/player.swf',
+    'file': 'pages/videos/Bulljump480.flv',
+    'controlbar': 'bottom',
+    'width': '100%',
+    'height': '100%',
+    'stretching':'exactfit',
+    'skin':'pages/videos/beelden.zip',
+    events: {
+    	onReady: function(){
+    		jwplayer('mediaspace').play();
+    	},
+    	onComplete: function(){
+    		document.location = "#!/mixology-cocktails";
+    	}
+  	},
+  	modes: [
+	   { type: "html5" },
+       { type: "flash", src: "js/libs/player.swf" },
+	]
+  });
+  
+  /*if(!$('html').hasClass('video')) {
+    options.file = 'pages/videos/Bulljump480.flv';
+  }*/
+</script>-->
+
+

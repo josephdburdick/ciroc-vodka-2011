@@ -1,0 +1,1314 @@
+/* HTML5 ✰ Boilerplate
+ * ==|== normalize ==========================================================
+ */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: hidden; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;width:100%;height:100%; }
+body { margin: 0; font-size: 12px; line-height: 1.231;width:100%;height:100%; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+::-moz-selection { background: #305078; color: #fff; text-shadow: none; }
+::selection { background: #305078; color: #fff; text-shadow: none; }
+     
+a { color: #2c2c2c;text-decoration:none; }
+a:visited { color: #2c2c2c; }
+a:hover { color: #305078; }
+a:focus { outline:none; }
+a:hover, a:active { outline: 0; }
+a.active{color:#305078}
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 30%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { bottom: 0.35em;display:inline-block; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 0; padding: 0;position:relative; }
+ul.bullet, ol.bullet { margin: 1em 0; padding: 0 0 0 40px;position:relative; }
+
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; *margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+button, input { line-height: normal; *overflow: visible; }
+table button, table input { *overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+input:valid, textarea:valid {  }
+input:invalid, textarea:invalid { background-color: #f0dddd; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+/*
+ * FONTS
+ */
+@font-face {
+    font-family: 'BertholdExtended';
+    src: url('../fonts/akzidenzgroteskbe-ex-webfont.eot');
+    src: url('../fonts/akzidenzgroteskbe-ex-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/akzidenzgroteskbe-ex-webfont.woff') format('woff'),
+         url('../fonts/akzidenzgroteskbe-ex-webfont.ttf') format('truetype'),
+         url('../fonts/akzidenzgroteskbe-ex-webfont.svg#BertholdAkzidenzGroteskBEExRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BertholdLightExtended';
+    src: url('../fonts/berthold_akzidenz_grotesk_be_light_extended-webfont.eot');
+    src: url('../fonts/berthold_akzidenz_grotesk_be_light_extended-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_light_extended-webfont.woff') format('woff'),
+         url('../fonts/berthold_akzidenz_grotesk_be_light_extended-webfont.ttf') format('truetype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_light_extended-webfont.svg#BertholdAkzidenzGroteskBELtEx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BertholdLightCondensed';
+    src: url('../fonts/berthold_akzidenz_grotesk_be_light_condensed-webfont.eot');
+    src: url('../fonts/berthold_akzidenz_grotesk_be_light_condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_light_condensed-webfont.woff') format('woff'),
+         url('../fonts/berthold_akzidenz_grotesk_be_light_condensed-webfont.ttf') format('truetype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_light_condensed-webfont.svg#BertholdAkzidenzGroteskBELtCn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BertholdCondensed';
+    src: url('../fonts/berthold_akzidenz_grotesk_be_condensed-webfont.eot');
+    src: url('../fonts/berthold_akzidenz_grotesk_be_condensed-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_condensed-webfont.woff') format('woff'),
+         url('../fonts/berthold_akzidenz_grotesk_be_condensed-webfont.ttf') format('truetype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_condensed-webfont.svg#BertholdAkzidenzGroteskBECn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BertholdBoldExtended';
+    src: url('../fonts/berthold_akzidenz_grotesk_be_bold_extended-webfont.eot');
+    src: url('../fonts/berthold_akzidenz_grotesk_be_bold_extended-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_bold_extended-webfont.woff') format('woff'),
+         url('../fonts/berthold_akzidenz_grotesk_be_bold_extended-webfont.ttf') format('truetype'),
+         url('../fonts/berthold_akzidenz_grotesk_be_bold_extended-webfont.svg#BertholdAkzidenzGroteskBEBdEx') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#bg { position: fixed; top: 0; left: 0; }
+.bgwidth { width: 100%; }
+.bgheight { height: 100%; }
+
+/* ==|== primary styles =====================================================
+   Author: j0e.me @ SGCAgency.com
+   ========================================================================== */
+img#bg{
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+#loading_page{
+	background:#fff url(../img/loading.gif) center center no-repeat;
+	width:30px;
+	height:30px;
+	position:absolute;
+	top:25px;
+	z-index:999;
+	right:30px;
+	
+	-moz-box-shadow: 0px 0px 10px #eee;
+  	-webkit-box-shadow: 0px 0px 10px #eee;
+  	box-shadow: 0px 0px 10px #eee;
+  	
+  	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+  	
+  	display:none;
+}
+body.index #container{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+#main{
+	position:relative;
+	width:100%;	
+	overflow:hidden;
+	height:100%;
+}
+#ajax-container{
+	position:relative;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	overflow:auto; /*NEW: was auto - 12/12/11*/
+	display:block;
+}
+#ajax-inner{
+	position:relative;
+	clear:both;
+	left:0px;
+	width:996px;
+	height:auto;
+	min-height:650px;
+	margin:0px auto;
+	overflow:hidden;
+}
+#ajax-inner.about{
+	height:650px;
+	width: 100%;
+}
+#ajax-inner.mixology{
+	background:url(../img/mixology/widewater_bg.png) 50% 88% repeat-x;)
+}
+.center-container{
+	overflow:hidden;
+	width:996px;
+	height:100%; /*NEW: was 100% - 12/12/11*/
+	position:relative;
+	margin:0 auto;
+	
+}
+.center-container.mixology{
+	
+}
+.center-info {margin-left:418px}
+.center-info > * {margin-left:0 !important; text-align: left !important;}
+.center-info > h3 {margin-left:0 !important; text-align: left !important; width:auto!important}
+
+
+/*
+ * SECONDARY
+ */
+a.btn-view{
+	font:normal 9px/13px "BertholdExtended";
+	display:block;
+	height:13px;
+	background: url(../img/arr_right-13px.png) center left no-repeat;
+	padding:0 0 0 13px;	
+}
+div.section-header{
+	position:absolute;
+	text-transform:uppercase;
+	font:normal 10px/21px "BertholdExtended","Helvetica Neue", Helvetica, Arial, sans-serif;
+	left:50%;
+	width:260px;
+	margin:15px 0 0 -130px;
+	z-index: 999;
+}
+div.section-header.terms{
+	width:400px;
+	margin-left:-200px;
+}
+h2{
+	font:normal 25px/1.2 "BertholdLightExtended","Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:center;
+	border-bottom:1px solid #e2e4e6;
+	margin: 0 0 5px 0;
+}
+h3{
+	font:normal 35px/1.2 "BertholdLightExtended","Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:left;
+	margin: 0px 0 5px 0;
+}
+h4{
+	font:normal 21px/23 "BertholdLightExtended","Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-align:left;
+	color:#000;
+}
+h4.text-center{
+	text-align:center !important;
+}
+p.text-center{
+	clear:both;
+	text-align:center !important;
+	margin-bottom: 12px;
+	margin-top: 5px;
+}
+div.section-header ul{
+	margin:0;
+	overflow:hidden;
+}
+div.section-header ul li{
+	position:relative;
+	float:left;
+	margin-left:54px;
+	list-style-type:none;
+}
+html.oldie div.section-header ul li{
+	margin-left:54px;
+}
+html.ff div.section-header ul li{
+	margin-left:54px;
+}
+.section-header.about ul li:first-child{
+	margin-left:0 !important;
+}
+div.section-header ul li:first-child,html.ff div.section-header ul li:first-child{
+	margin-left:0;
+}
+
+.center-container.flavor-snapfrost{
+	height:680px;
+	width:956px;
+	top:15%;
+	background:url(../img/flavors/img_flavor-snapfrost.png) 22% 16% no-repeat;
+}
+.center-container.flavor-redberry{
+	height:680px;
+	width:956px;
+	top:15%;
+	background:url(../img/flavors/img_flavor-redberry.png) 22% 16% no-repeat;
+}
+.center-container.flavor-coconut{
+	height:680px;
+	width:956px;
+	top:15%;
+	background:url(../img/flavors/img_flavor-coconut.png) 22% 16% no-repeat;
+}
+.center-container.flavor-peach{
+	height:680px;
+	width:956px;
+	top:15%;
+	background:url(../img/flavors/img_flavor-peach.png) 22% 16% no-repeat;
+}
+.center-container.flavor-snapfrost .sublinks,
+.center-container.flavor-peach .sublinks,
+.center-container.flavor-coconut .sublinks,
+.center-container.flavor-redberry .sublinks{
+	margin-top:50px;
+}
+
+/*
+ * ABOUT
+ */
+.center-container.about{
+}
+.center-container.about-seancombs{
+	height:680px;
+	top:20%;
+	background:url(../img/about/img_about-seanjohn.png) 8% -3% no-repeat;
+	
+	width:956px;
+	margin:0 auto;
+	height:100%;
+}
+.center-container.about-seancombsvideo{
+	height:680px;
+	top:20%;
+	
+	width:956px;
+	margin:0 auto;
+	height:100%;
+}
+.center-container.about-seancombsvideo ul{
+	width:770px;
+	position:relative;
+	padding:0;
+	margin:0 auto;
+	list-style:none;
+}
+.center-container.about-seancombsvideo ul li{
+	position:relative;
+	float:left;
+	margin-left:20px;
+}
+.center-container.about-seancombsvideo ul li:first-child{
+	margin-left:0;
+}
+.center-container.about-ciroc{
+	height:100%;
+	top:19%;
+	background:url(../img/flavors/bg_flavorslanding-noRepeat2.png) 6% 9% no-repeat;
+}
+.center-container.about-grapes{
+	height:100%;
+	top:19%;
+	background:url(../img/about/img_about-grapes.png) 12% 11% no-repeat;
+}
+.center-container.about-distillation{
+	height:100%;
+	top:19%;
+	background:url(../img/about/img_about-distillation.png) 12% 11% no-repeat;
+}
+.center-container.about-jsr{
+	top:19%;
+	height:100%;
+	background:url(../img/about/img_about-jsr.png) 7% 0% no-repeat;
+}
+.center-container.about-jsrphotos{
+	top:19%;
+	height:100%;
+}
+.carousel{
+	position:relative;
+	width:100%;
+	height:420px;
+	margin:0 auto;
+	text-align:center;
+	list-style:none;
+}
+.carousel li{
+	position:relative;
+	width:100%;
+	height:100% !important;
+	margin:0 auto;
+	text-align:center;
+}
+.carousel img{
+	display:block;
+	margin:0 auto;
+	height:100%;
+}
+.carousel-sprite{
+	position:absolute;
+	z-index:999;
+	display:block;
+	width:60px;
+	height:70px;
+	background:url(../img/about/img_slidshow-sprite.png) no-repeat;
+	top:50%;
+	margin-top:-30px;
+}
+.carousel-sprite.prev{
+	left:30px;
+	background-position:left top;
+}
+.carousel-sprite.next{
+	right:30px;
+	background-position:right top;
+}
+
+
+.center-container.index-agegate{
+	height:100%;
+	background:url(../img/about/img_agegate.png) 50% 44% no-repeat;
+	width:100%;
+	box-shadow:inset 0 -20px 60px 10px #666,inset 0 0px 150px 0px #999;
+}
+.center-container.index-agegate h3{
+	text-align:center;
+	font-size:22px;
+}
+.center-container.index-agegate .logo{
+	text-align:center;
+	margin: 20px auto 0px auto;
+}
+.center-container.index-agegate .submit a{
+	font:normal 24px/30px "BertholdExtended", "Helvetica Neue", "Helvetica", Arial;
+	display:block;
+	position:relative;
+	margin-top: 17px;
+	text-shadow:0 1px 0px #fff;
+}
+
+.center-container.index-agegate .bottom
+{
+	bottom:0px;
+	position:absolute;
+	width:100%;
+}
+
+.center-container.about h3{
+	text-align:center;
+	margin:0 auto 10px !important;
+}
+
+.center-container.flavor h3{
+	margin: 0 0 10px 303px;
+	width:535px;
+}
+.center-container.about h3{
+	margin: 0 0 10px 375px;
+	width:535px;
+}
+.center-container.about-jsr h3{
+}
+.center-container.about-jsr p{
+	width:425px !important;
+	margin-left:418px ;
+}
+.center-container.about-seancombs p{
+	width: 545px !important;
+	margin-left: 408px;
+}
+.center-container.about-grapes p{
+	margin-left:357px;
+}
+.center-container.about p,.center-container.flavor p{
+	width:535px;
+	font:normal 12px/18px "BertholdExtended", "Helvetica Neue", "Helvetica", Arial;
+	color:#636262;
+	letter-spacing: -0.055em;
+	margin-left:379px;
+}
+.center-container.flavor p{
+	margin-left:303px;
+	margin-bottom: 30px;
+}	
+.center-container.about-distillation p{
+	margin-left:360px;
+}
+
+.sublinks{
+	width:535px;
+	margin:0 auto 30px;
+	text-align:center;
+}
+.center-container.about-ciroc .sublinks{
+	margin-top:10px;
+	margin-bottom:30px;
+}	
+
+.sublinks a{
+	margin-left:27px;
+	font:normal 10px/13px "BertholdExtended";
+	text-transform: uppercase;
+}
+.sublinks a:first-child{
+	margin-left:0;
+}
+
+
+/*
+ * MIXOLOGY DETAIL
+ */
+div.section-header.mixology ul li:first-child,
+div.section-header.flavors ul li:first-child,
+html.ff div.section-header.mixology ul li:first-child,
+html.ff div.section-header.flavors ul li:first-child{
+	margin-left:36px;
+}
+#ajax-inner.mixology{
+	
+}
+.center-container.mixology h3{
+	font:normal 50px/60px "BertholdLightCondensed", "Arial Narrow", Helvetica;
+	color:#000;
+	margin-bottom:-10px;
+	text-transform:uppercase;
+	color:#848484;
+}
+.center-container.mixology h3 span.lineheight{
+	position: relative;
+	top: -17px;
+	margin-bottom:-17px;
+}
+.center-container.mixology h4{
+	font:normal 18px/18px "BertholdLightCondensed", "Arial Narrow", Helvetica;
+	color:#000;
+	margin:10px 0;
+	text-transform: uppercase;
+}
+.detailcopy{
+	width:340px;
+}
+.detailcopy p{
+	font:normal 14px/18px "BertholdExtended", Helvetica;
+}
+
+.arr-mixology{
+	position:absolute;
+	
+	width:80px;
+	height:80px;
+	top:50%;
+	margin-top:-40px;
+	
+	-webkit-border-radius: 40px;
+	-moz-border-radius: 40px;
+	border-radius: 40px;
+
+	cursor:pointer;
+
+}
+html.oldie .arr-mixology{
+	filter: alpha(opacity=100); 
+	-khtml-opacity: 1;     
+	-moz-opacity: 1;      
+	opacity: 1;
+}
+.arr-mixology > a {
+	display:block;
+	background:url(../img/mixology/arr_leftright-sprite.png) no-repeat;	
+	width:59px;
+	height:59px;
+	
+	filter: alpha(opacity=35); 
+	-khtml-opacity: 0.35;     
+	-moz-opacity: 0.35;      
+	opacity: 0.35;
+	
+	cursor:pointer;
+           
+}
+
+.arr-mixology > a > span{
+	display:block;
+	background:url(../img/mixology/arr_leftright-sprite.png) no-repeat;	
+	width:59px;
+	height:59px;
+	
+	cursor:pointer;
+           
+}
+html.oldie .arr-mixology > a {
+	filter: alpha(opacity=100); 
+	-khtml-opacity: 1;     
+	-moz-opacity: 1;      
+	opacity: 1;
+}
+
+.arr-mixology:hover,.arr-mixology>a:hover{
+	cursor:pointer;
+}
+
+.arr-mixology.left{left:50px;}
+.arr-mixology.left a{background-position:-40% 0;}
+.arr-mixology.left a span{background-position: -40% 100%;}
+.arr-mixology.right{right:50px;}
+.arr-mixology.right a{background-position:130% 0;}
+.arr-mixology.right a span{background-position: 130% 100%;}
+
+
+
+/*
+ * MIXOLOGY DRINKS
+ */
+.center-container.mixology .detailcopy{
+	position:absolute;
+	overflow:hidden;
+	top:194px;
+	left:537px;
+}
+.center-container.mixology.diddy{
+	background:url(../img/mixology/detail_ciroc-diddy.png) -50px 30px no-repeat;
+}
+.center-container.mixology.skinnycosmo{
+	background:url(../img/mixology/detail_ciroc-skinnycosmo.png) 130px 168px no-repeat;
+}
+.center-container.mixology.blu{
+	background:url(../img/mixology/detail_ciroc-blu.png) 120px 60px no-repeat;
+}
+.center-container.mixology.cocohavana{
+	background:url(../img/mixology/detail_ciroc-cocohavana.png) 100px 140px no-repeat;
+}
+.center-container.mixology.lola{
+	background:url(../img/mixology/detail_ciroc-lola.png) 185px 165px no-repeat;
+}
+.center-container.mixology.hotmama{
+	background:url(../img/mixology/detail_ciroc-hotmama.png) 70px 95px no-repeat;
+}
+.center-container.mixology.cocoloso{
+	background:url(../img/mixology/detail_ciroc-cocoloso.png) 220px 105px no-repeat;
+}
+.center-container.mixology.georgia{
+	background:url(../img/mixology/detail_ciroc-georgia.png) 100px 135px no-repeat;
+}
+.center-container.mixology.razzledazzle{
+	background:url(../img/mixology/detail_ciroc-razzledazzle.png) 200px 100px no-repeat;
+}
+
+/*Positioning every Mixology water background*/
+.bg-water{
+	position:relative;
+	overflow:hidden;
+	background:url(../img/mixology/widewater_bg.png) 50% 100% repeat-x;)
+}
+.bg-water.agegate{
+	background-position:50% 70%;
+}
+.bg-water.cocktails{
+	background-position: 50% 100%;
+	height: 650px;
+}
+.bg-water.aboutciroc{
+	background-position: 50% 93%;
+	height: 660px;
+}
+.bg-water.flavors{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.diddy{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.skinnycosmo{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.blu{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.cocohavana{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.lola{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.hotmama{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.cocoloso{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.georgia{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.georgia{
+	background-position: 50% 100%;
+	height: 670px;
+}
+.bg-water.razzledazzle{
+	background-position: 50% 100%;
+	height: 670px;
+}
+/*
+ * FLAVORS LANDING PAGE 
+ */
+#ajax-inner.flavors,#ajax-inner.mixology{
+	width:100%;
+}
+.flavor-container{
+	width:670px;
+	height:600px; /*Was 100%*/
+	margin:64px auto;
+	background:url(../img/flavors/bg_flavorslanding-noRepeat.png) center center no-repeat;
+}
+.cocktails-container{
+	width:100%;
+	margin:0 auto;
+	height:100%;
+	background:url(../img/flavors/bg_flavors-noRepeat.png) 50% 60% no-repeat;
+}
+.center-container.cocktails{
+	width:1000px;
+	overflow:visible;
+}
+.center-container.flavors{
+	width:682px;
+	overflow:visible;
+}
+.center-container.cocktails h4{
+	text-align:center;
+	margin-top: -195px;
+	top: 60%;
+	padding:0;
+}
+.center-container.flavors h4{
+	text-align:center;
+	margin-top:-245px;
+	top:50%;
+	padding:0;
+	width:682px;
+}
+.center-container.cocktails h5{
+	text-align:center;
+	margin-top:-255px;
+	top:50%;
+	padding:0;
+	font:normal 9px/9px Helvetica, Aril, sans-serif;
+}
+.center-container.flavors h5{
+	text-align:center;
+	margin-top:-255px;
+	top:50%;
+	padding:0;
+	width:682px;
+	font:normal 9px/9px Helvetica, Aril, sans-serif;
+}
+.center-container.cocktails .flavors-drinks{
+	position:absolute;
+	top:50%;
+	height:500px;
+	width:100%;
+	margin-top:-250px;
+}
+.center-container.flavors .flavors-drinks{
+	position:absolute;
+	top:50%;
+	height: 400px;
+	width: 682px;
+	margin-top: -250px;
+}
+
+.center-container.flavors .flavors-drinks a.imgmap{
+	position:relative;
+	display:block;
+	height:100%;
+	float:left;
+	top:50%;
+	margin-top:-205px;
+}
+.center-container.cocktails .flavors-drinks a.imgmap{
+	position:absolute;
+	display:block;
+	height:73%;
+	float:left;
+	top:50%;
+	margin-top:-185px;
+}
+.center-container.flavors a.circleLearnMore{
+	margin-top:210px;
+}
+
+
+
+
+.flavor-legal{/*margin-top:115px;*/}
+
+/*
+ * Le FLAVOR Drink hotspots
+ */
+.center-container.flavors a#link-redberry{
+	width:96px;
+	margin-left:2px;
+}
+.center-container.flavors a#link-coconut{
+	width:88px;
+	margin-left:2px;
+}
+.center-container.flavors a#link-snapfrost{
+	width: 90px;
+	margin-left: 155px;
+}
+.center-container.flavors a#link-peach{
+	width:88px;
+	margin-left:2px;
+}
+
+
+/*
+ * Le COCKTAIL Drink hotspots
+ */
+.center-container.cocktails a#link-redberry{
+	margin-left:36px;
+	width:80px;
+}
+
+.center-container.cocktails a#link-razzledazzle{
+	margin-left:117px;
+	width:80px;
+}
+.center-container.cocktails a#link-coconut{
+	margin-left:214px;
+	width:74px;
+}
+.center-container.cocktails a#link-lola{
+	margin-left:716px;
+	width:71px;
+}
+.center-container.cocktails a#link-hotmama{
+	margin-left:284px;
+	width:74px;
+}
+
+.center-container.cocktails a#link-snapfrost{
+	margin-left:645px;
+	width:74px;
+}
+
+.center-container.cocktails a#link-peach{
+	margin-left:819px;
+	width:74px;
+}
+
+.center-container.cocktails a#link-georgia{
+	margin-left:891px;
+	width:95px;
+}
+
+a.circleLearnMore{
+	position:absolute;
+	display:block;
+	width:113px;
+	height:113px;
+	text-align:center;
+	font:normal 14px/12px "BertholdCondensed";
+	text-transform:uppercase;
+	background:url(../img/flavors/bg_circleLearnMore-noRepeat.png) center center no-repeat;
+	
+
+	display:none;
+}
+a.circleLearnMore:hover{
+  /*	-moz-box-shadow: 0px 0px 10px #ccc;
+	-webkit-box-shadow: 0px 0px 10px #ccc;
+	box-shadow: 0px 0px 10px #ccc;*/
+}
+.center-container.cocktails a.circleLearnMore{
+	top:55%;
+	margin-top:0px;
+}
+a.circleLearnMore span{
+	display:block;
+	margin:39px auto 0;
+	position:relative;
+	color:#fff;
+	text-shadow: 0 1px 2px #000;
+}
+a.circleLearnMore:hover span{
+	color:#fff;
+}
+a.circleLearnMore.singleline span{
+	margin-top:48px;
+}
+/*
+ * Popups - Cocktails
+ */
+.center-container.cocktails .flavors-drinks a#pop-snapfrost{
+	left:17px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-diddy{
+	left:84px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-redberry{
+	left:195px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-razzledazzle{
+	left:267px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-coconut{
+	left:632px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-cocoloso{
+	left:707px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-peach{
+	left:806px;
+}
+
+.center-container.cocktails .flavors-drinks a#pop-georgia{
+	left:892px;
+}
+
+/*
+* Popups - Flavors
+*/
+
+.center-container.flavors .flavors-drinks a#pop-redberry{
+	left:225px;
+}
+.center-container.flavors .flavors-drinks a#pop-peach{
+	left:412px;
+}
+.center-container.flavors .flavors-drinks a#pop-snapfrost{
+	left:132px;
+}
+.center-container.flavors .flavors-drinks a#pop-coconut{
+	left:316px;
+}
+
+b.bold-ext{
+	font:normal 9px/12px "BertholdBoldExtended", "Arial Bold";
+	color:#474747;
+}
+
+
+/*
+ * FOOTER
+ */
+footer{
+	position:relative;
+	height:140px;
+	width:100%;
+	z-index: 999;
+}
+div.nav-mainbottom-container{
+	width:100%;
+	border-top:1px solid #cbcbcc;
+	border-bottom:1px solid #cbcbcc;
+	overflow:hidden;
+}
+ul.nav-mainbottom{
+	height:36px;
+
+	padding: 0;
+	margin: 0 auto;
+	list-style-type: none;
+	float: left;
+	position: relative;
+	left: 50%;
+}
+ul.nav-mainbottom li{
+	position:relative;
+	list-style-type:none;
+	float: left;
+	position: relative;
+	right: 50%;
+}
+ul.nav-mainbottom li#li-mixology{
+	width:115px;
+}
+ul.nav-mainbottom li a{
+	display:block;
+	height:36px;
+	text-indent:-999em;
+	background:url(../img/sprite_mnu-bottomNav.png);
+	background-position-y: 0px;
+}
+
+ul.nav-mainbottom li a#nav-about{
+	width:95px;
+	background-position: 0px 0px;
+}
+ul.nav-mainbottom li a#nav-mixology{
+	width:111px;
+	background-position: 337px 0px;
+}
+ul.nav-mainbottom li a#nav-press{
+	width:95px;
+	background-position: 230px 0px;
+}
+ul.nav-mainbottom li a#nav-wheretobuy{
+	width:133px;
+	background-position: 138px 0px;
+}
+ul.nav-mainbottom li a#nav-about:hover,
+ul.nav-mainbottom li a#nav-about.active{background-position:0 36px;}
+ul.nav-mainbottom li a#nav-mixology:hover,
+ul.nav-mainbottom li a#nav-mixology.active{background-position:337px 36px;}
+ul.nav-mainbottom li a#nav-press:hover,
+ul.nav-mainbottom li a#nav-press.active{background-position:230px 36px;}
+ul.nav-mainbottom li a#nav-wheretobuy:hover,
+ul.nav-mainbottom li a#nav-wheretobuy.active{background-position:138px 36px;}
+
+
+.logo-container{
+	width:100%;
+	position:relative;
+	float:none;
+	clear:both;
+	text-align:center;
+}
+.logo-container h1{
+	width:50%;
+	margin:10px auto;
+}
+.logo-container h1 a{
+	display:block;
+}
+html.ie7 .logo-container h1{
+	margin-top:12px;
+}
+.footer-bottomright{
+	position:absolute;
+	bottom:15px;
+	right:20px;
+	height:16px;
+}
+.footer-bottomright > a{
+	margin-left:6px;
+}
+html.ie7 .footer-bottomright{
+	bottom:15px;
+	right:15px;
+}
+.footer-links-container{
+	overflow:hidden;
+	background:#464646;
+	-moz-box-shadow: 0px 0px 5px #000;
+    -webkit-box-shadow:0px 0px 5px #000;
+    box-shadow: 0px 0px 5px #000;
+}
+.footer-links{
+	position:relative;
+	width:695px;
+	margin:0 auto;
+	overflow:hidden;
+	text-transform:uppercase;
+}
+.footer-links li{
+	float:left;
+	list-style-type:none;
+	margin-left:43px;
+}
+html.ff .footer-links li{
+	float:left;
+	list-style-type:none;
+	margin-left:40px;
+}
+html.oldie .footer-links, html.ie9 .footer-links{
+	width:695px;
+}
+.footer-links li:first-child,html.ff .footer-links li:first-child{
+	margin-left:0px;
+}
+.footer-links li a{
+	font:normal 8px/26px "BertholdExtended", Arial;
+	color:#fff;
+}
+.footer-links li a:hover{
+	color:#eee;
+	text-shadow: 0px 1px 0px #000;
+
+}
+
+/*
+ * PRESS
+ */
+.center-container.press{
+	min-height:550px;
+}
+.center-container.press #scrollbar1 a{
+	font:normal 11px/16px "BertholdExtended", "Helvetica Neue", Arial;
+	text-decoration:underline;
+}
+.center-container.press em{
+	display:block;
+	font:italic 11px/16px "Helvetica Neue",Helvetica, Arial;
+
+}
+.center-container.press.form{
+	position:relative;
+	top:50%;
+	left:50%;
+	height:190px;
+	width:400px;
+	
+	margin:-95px 0 1000px -170px;
+}
+.center-container.press .col-2{
+	position:relative;
+	padding:0;
+	margin:20px auto 20px;
+	list-style: none;
+	list-style-type:none;
+	display:block;
+}
+.center-container.press .col-2.results{
+	width: 380px;
+	margin-top:80px;
+}
+.center-container.press .col-2 li{
+	position:relative;
+	float:left;
+	margin-left:40px;
+}
+.center-container.press .col-2 li:first-child{
+	margin-left:0;
+}
+
+.center-container.press.form h4{
+	margin:0;
+	line-height:normal;
+	text-transform:uppercase;
+}
+.center-container.press label{
+	position:relative;
+	display:block;
+	font:normal 12px/1.8 "BertholdExtended", Arial;
+	text-transform:uppercase;
+}
+.center-container.press input[type="text"]{
+	float:left;
+	width:95%;
+	display:block;
+	background:#f0f0f0;
+}
+.center-container.press a.submit{
+	position:relative;
+	margin:10px auto;
+	text-align:center;
+	width:80px;
+	font:normal 24px/2.5 "BertholdExtended", "Helvetica Neue", Arial;
+}
+.center-container.press.wheretobuy{
+	opacity:0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+}
+.center-container.press.wheretobuy #scrollbar1 a{
+	text-transform:uppercase;
+}
+.center-container.press.wheretobuy em{
+	display:block;
+	font:italic 11px/14px "Helvetica Neue",Helvetica, Arial;
+	text-transform:none;
+}
+p.shareicons{
+	
+}
+.center-container.sitemap h4{
+	margin:8px 0 15px 0;
+}
+.center-container.sitemap h5{
+	font:normal 18px/20px "BertholdLightExtended", Helvetica;
+	
+	margin:6px 0 10px !important;
+}
+.center-container.sitemap ul{
+	overflow:hidden;
+}
+.center-container.sitemap ul li{
+	margin:0px 0 20px 0;
+}
+
+#scrollbar1 { 
+	width: 550px;
+	clear: both;
+	margin: -200px 0 0 -100px;
+	left: 50%;
+	position: absolute;
+	top: 50%;
+	height: 445px;
+}
+.center-container.press.terms #scrollbar1,
+.center-container.press.privacy #scrollbar1{
+	margin-left:-260px;
+}
+.center-container.press.wheretobuy #scrollbar1{
+	height:330px;
+	margin-top:-90px;
+}
+.center-container.press.wheretobuy #scrollbar1 .viewport{
+	height:330px;
+}
+.center-container pre{
+	font:normal 11px/16px "Helvetica Neue",Helvetica, Arial;
+}
+.btn-video-close{
+	display:block;
+	position:absolute;
+	top:22px;
+	left:28px;
+	
+	width:42px;
+	height:42px;
+	background:url(../img/btn-close.png) no-repeat;
+	z-index: 999;
+	cursor:pointer;
+}
+.center-container.sitemap a{
+	text-decoration:underline;
+	display:inline-block;
+	margin:0 0 5px 0;
+	
+}
+.urllink{
+	padding:2px 4px;
+	border:1px solid #ccc; 
+	width:220px;
+	height:22px;
+	font:normal 12px/22px Helvetica;
+	color:#444;
+}
+
+#scrollbar1 .viewport { width: 500px; height: 445px; overflow: hidden; position: relative; }
+#scrollbar1 .overview { list-style: none; position: absolute; left: 0; top: 0; }
+#scrollbar1 .thumb .end,
+#scrollbar1 .thumb { /*background-color: #003D5D;*/ }
+#scrollbar1 .scrollbar { position: relative; float: left; width: 28px; margin-right: 10px;}
+#scrollbar1 .track { background:url(../img/about/img_scroll-track.png) 47% 0; height: 100%; width:28px; position: relative; }
+#scrollbar1 .thumb { background:url(../img/about/img_scroll-scrubber.png) top center no-repeat;height: 28px; width: 28px; cursor: pointer; overflow: hidden; position: absolute; top: 0; }
+/*#scrollbar1 .thumb:hover,#scrollbar1 .thumb:active,#scrollbar1 .thumb:focus {background:url(../img/about/img_scroll-scrubber.png) bottom center no-repeat;cursor:pointer}*/
+#scrollbar1 .thumb .end { overflow: hidden; height: 5px; width: 13px; }
+#scrollbar1 .disable{ display: none; }
+
+p.shareicons > a{
+	position:relative;
+	top:4px;
+	margin-right:3px;
+}
+p.shareicons > a:first-child{
+	margin-left:15px;
+}
+a.st_facebook{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(../img/icon_facebook.gif);
+	
+}
+a.st_twitter{
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(../img/icon_twitter.gif) !important;
+}
+
+
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* ==|== media queries ====================================================== */
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}

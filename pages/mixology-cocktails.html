@@ -1,0 +1,92 @@
+	<div class="bg-water cocktails">
+	
+		<div class="cocktails-container">
+		 	<div class="center-container cocktails">
+		 		<div class="flavors-drinks">
+		 		<h4>&nbsp;</h4>
+					
+                    <div id="snapfrost" style="width:70px;height:290px;margin-left:41px; margin-top:-195px; float:left;" class="flavor_div"></div>
+                    <div id="diddy" style="width:70px;height:290px;margin-left:-3px; margin-top:-195px; float:left;" class="flavor_div"></div>
+                    <div id="redberry" style="width:67px;height:290px;margin-left:38px; margin-top:-195px; float:left;" class="flavor_div"></div>
+                    <div id="razzledazzle" style="width:99px;height:290px;margin-left:0px; margin-top:-195px; float:left;" class="flavor_div"></div>
+                    
+                    <div id="coconut" style="width:65px;height:290px;margin-left:270px; margin-top:-195px; float:left;" class="flavor_div"></div>
+                    <div id="cocoloso" style="width:75px;height:130px;margin-left:5px; margin-top:-15px; float:left;" class="flavor_div"></div>
+                    <div id="peach" style="width:70px;height:290px;margin-left:65px; margin-top:-195px; float:left;" class="flavor_div"></div>
+                    <div id="georgia" style="width:78px;height:290px;margin-left: 895px; margin-top:-195px; float:left;" class="flavor_div"></div>
+
+                
+		 		</div>
+		 	</div><!-- /.center-container-->
+		 </div>
+	</div>
+		<script type="text/javascript">
+		$('.flavor_div').mouseenter(function(){
+			single = 'singleline';
+			
+			if ((this.id) == 'snapfrost') 
+			{
+				text = 'SNAP<br>FROST';
+				single = '';
+				linkpage = '#!/introsnapfrost';
+			}
+			if ((this.id) == 'peach')
+			{ 
+				text = 'PEACH';
+				linkpage = '#!/intropeach';
+			}
+			if ((this.id) == 'coconut')
+			{
+				 text = 'COCONUT';
+				 linkpage = '#!/intrococonut';
+			}
+			if ((this.id) == 'redberry') 
+			{	
+				text = 'RED BERRY';
+				linkpage = '#!/introredberry';
+			}
+			if ((this.id) == 'georgia') 
+			{
+				text = 'C&Icirc;ROC<sup>&reg;</sup><br>GEORGIAPOLITAN';
+				single = '';
+				linkpage = '#!/mixology-cirocgeorgia'
+			}
+			if ((this.id) == 'razzledazzle') 
+			{
+				text = 'RAZZLE<br>DAZZLE';
+				single = '';
+				linkpage = '#!/mixology-cirocrazzledazzle'
+			}
+			if ((this.id) == 'cocoloso')
+			{
+				 text = 'COCO LOSO';
+				 linkpage = '#!/mixology-cocoloso'
+			}
+			if ((this.id) == 'diddy') 
+			{
+				text = 'C&Icirc;ROC<sup>&reg;</sup> DIDDY';
+				linkpage = '#!/mixology-cirocdiddy'
+			}
+			
+						
+			$('#'+this.id).html('<a href="'+linkpage+'" id="pop-'+this.id+'" class="circleLearnMore '+single+'"><span>'+text+'</span></a>');
+			if (!$('html').hasClass('oldie')){
+				$('#pop-'+this.id).stop(true,true).delay(100).fadeIn(300).addClass('active');
+			}
+			else {
+				$('#pop-'+this.id).stop(true,true).show().addClass('active');
+			}
+				
+		});
+		$('.flavor_div').mouseleave(function(){
+			$('#'+this.id).html('');
+			if (!$('html').hasClass('oldie')){	
+				$('#pop-'+this.id).delay(100).fadeOut(300).removeClass('active');
+			}
+			else {
+				$('#pop-'+this.id).hide().removeClass('active');
+			}	
+		});	
+		
+		
+		</script>

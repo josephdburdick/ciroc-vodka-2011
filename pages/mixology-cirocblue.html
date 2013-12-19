@@ -1,0 +1,63 @@
+
+		 	<div class="center-container mixology blu">
+		 		
+		 		<div class="detailcopy">
+		 			<h3>C&#206;ROC<sup>&reg;</sup> Blue</h3>
+			 		<h4>
+						1.5 OZ. C&#206;ROC<sup>&reg;</sup> VODKA<br>
+						.5 OZ. BLUE CURACAO<br/>
+						.25 OZ. GRAPEFRUIT JUICE<br/>
+						.5 OZ. SIMPLE SYRUP
+					</h4>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p>&nbsp;</p>
+					<p><a href="http://www.1-877-spirits.com/">Buy Now from 877-Spirits</a></p>
+
+					<p class="shareicons">
+						<img src="img/mixology/img_Share.png" alt="Share">
+						
+						<a class='st_facebook' target="_blank" href="http://www.facebook.com/photo.php?fbid=10150497393587162"></a>
+						<a class='st_twitter' target="_blank" href="http://twitter.com/home?status="></a>
+						<!--<span  class='st_email'></span>-->
+					 	
+					 	<script type="text/javascript">
+					 	var drinkName, daLocation, locationtxt, api_key, api_login, api_url = null
+					 	
+					 	drinkName = $('.detailcopy').find('h3').text().replace('CÎROC® ', '');
+					 	daLocation = location.href; //.replace("#",'%23');
+					 	locationtxt = daLocation;
+						
+			            function shorten(url, callback) {
+			                if(!api_key || !api_login || !api_url) { console.log("returning... not yet initialized"); return; } 
+			                if(!url || !callback) { throw "Attempt to call shorten without a url or a callback function"; }
+			                $.getJSON("http://"+api_url+"/v3/shorten?longUrl="+encodeURIComponent(url)+"&login="+api_login+"&apiKey="+api_key+"&callback=?", callback);
+			            }
+			             api_key = "R_6d2f17d9c980e8d4b08c3dcca00e63de"; 
+						 api_login = "o_5rrbvrcvs9"; 
+						 api_url = "api.bitly.com";
+			
+			             $(function() {
+			                shorten(locationtxt, function(response) { 
+			                	daLocation = (response.data.url); 
+			                	//console.log(response);
+			                	var diddly = ("http://twitter.com/home?status=@Ciroc "+ drinkName + " " + daLocation);
+				 				$('a.st_twitter').attr('href',diddly);	
+			                });
+			             });
+					 	</script>
+
+					</p>
+					<p>
+						<img src="img/mixology/info_ciroc-vodka.png" alt="CELEBRATE LIFE RESPONSIBLY.
+							CÎROC® Vodka. Distilled From Fine French Grapes. 
+							40% Alc/Vol. © 2012 Imported from France 
+							by Diageo, Norwalk, CT.">
+					</p>
+				</div> <!-- /.detailcopy-->
+				<span class="arr-mixology left"><a href="#!/mixology-cirocskinnycosmo"><span></span></a></span>
+		 		<span class="arr-mixology right"><a href="#!/mixology-ciroccocohavana"><span></span></a></span>
+		 	</div><!-- /.center-container-->
+		 	
+		 	<script src="js/mixology-detail.js"></script>
+			

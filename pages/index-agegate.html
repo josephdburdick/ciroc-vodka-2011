@@ -1,0 +1,76 @@
+<div class="bg-water agegate" style="height:100%;">
+<div class="center-container index index-agegate">
+	<div class="logo"><img src="img/index/logo_ciroc-ultrapremium.png" alt="Ciroc - Ultra Premium"></div>
+	<div class="bottom">
+    	
+        <!--h3>Please enter your date of birth to continue.</h3>
+		 		<p class="text-center">
+				</p>
+                <div></div>
+  <!--p class="text-center submit">
+  	<img src="img/index/celebrate.png" alt="C&#206;ROC&reg; Ultra Premium"><br>
+  	<input type="checkbox" name="cookie" id="cookie" value="SaveCookie" checked="yes"> By entering this site you agree to our Terms and Conditions and Privacy &amp; Cookie Notice<br>
+    <a href="javascript:void(0);" onclick="ValidateDate();" >SUBMIT</a>
+</p-->
+            <div class="logo-container">
+                
+                <div class="footer-bottomright">
+                    <img src="img/img_JoinTheConversation.png" alt="Join The Conversation">
+                    <a href="http://www.facebook.com/ciroc"><img src="img/icon_facebook.gif" alt="Friend CIROC"></a>
+                    <a href="http://twitter.com/#!/ciroc"><img src="img/icon_twitter.gif" alt="Follow CIROC"></a>
+                    <a href="http://www.youtube.com/user/OfficialCiroc"><img src="img/icon_youtube.gif" alt="Subscribe to CIROC"></a>
+                </div>
+            </div>
+            <div class="footer-links-container">
+                <ul class="footer-links">
+                    <ul class="footer-links">
+						<li><a href="#!/privacy" target="_blank">Privacy Policy</a></li>
+						<li><a href="#!/terms" target="_blank">Terms &amp; Conditions</a></li>
+						<li><a href="mailto:cirocvodka@consumer-care.net">Contact Us</a></li>
+						<li><a href="http://www.drinkiq.com/" target="_blank">DrinkIQ.com</a></li>
+						<li><a href="http://www.centurycouncil.org/" target="_blank">The Century Council</a></li>
+						<li><a href="#!/sitemap" target="_blank">Site Map</a></li>
+					</ul>
+                </ul>
+            </div>
+    </div>
+            
+</div>
+</div>
+            
+            
+            <!-- eo center-container-->
+             <script src="agegateway/LPAValidation.js"></script>
+            <script>
+			xmlDoc = loadXML('agegateway/CountryAgeMapping.xml');
+			function ValidateDate(){	
+			
+				DateofBirth = $('#DateOfBirth_Year').val()+$('#DateOfBirth_Month').val()+$('#DateOfBirth_Day').val();
+				if($('#cookie').is(':checked')==false){
+					//isDate(DateofBirth, $('#country').val(), 0);
+					alert("Invalid Date: Please agree to the Terms and Conditions and Privacy & Cookie Notice");
+				} else {
+					isDate(DateofBirth, $('#country').val(), 1);
+				}
+			}
+			
+			var nodesCountry = xmlDoc.getElementsByTagName('Country');	
+
+			for(i=0;i< nodesCountry.length;i++)
+			{
+				//i = i - 1;
+				node = nodesCountry[i];		
+				value = getNodeValue(node);		
+				if (value == 'UNITED STATES'){
+					$('#country').append('<option selected="selected" value="'+value+'">'+value+'</option>');
+				}
+				else{
+					$('#country').append('<option value="'+value+'">'+value+'</option>');
+				}
+		
+			}
+			$(document).bind('cbox_complete', function(){
+			    $("select.gate-boxselect:first").focus(); 
+			});
+						
+			</script>

@@ -1,0 +1,29 @@
+<div id='mediaspace'></div>
+<a href="#!/about-seancombsvideo" class="btn-video-close"></a>
+
+<script type="text/javascript">
+jwplayer("mediaspace").setup({
+    'width': '100%',
+    'height': '100%',
+    'stretching':'fill',
+	'smoothing' :'true',
+    //'skin':'pages/videos/beelden.zip',
+    levels: [
+        {file: 'pages/videos/ciroc_salsa.mp4', type: 'video/mp4' }
+    ],
+    events: {
+    	onReady: function(){
+    		jwplayer('mediaspace').play();
+    	},
+    	onComplete: function(){
+    		document.location = "#!/about-seancombsvideo";
+    	}
+  	},
+    modes: [
+        //{ type: 'html5' },
+        { type: 'flash', src: 'js/libs/player.swf' }
+    ]
+});
+</script>
+
+

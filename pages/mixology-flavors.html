@@ -1,0 +1,44 @@
+	<div class="bg-water flavors">
+
+		<div class="flavor-container">
+		 	<div class="center-container flavors">
+		 		<div class="flavors-drinks">
+		 		<h4>&nbsp;</h4>
+		 		<h5>&nbsp;</h5>
+					<div id="snapfrost" style="width:97px;height:100%;margin-left:139px; float:left;" class="flavor_div">
+					</div>
+                    <div id="redberry" style="width:97px; height:100%;margin-left:-4px;float:left;" class="flavor_div">
+					</div>
+                    <div id="coconut" style="width:97px; height:100%;margin-left:-4px;float:left;" class="flavor_div">
+					</div>
+					<div id="peach" style="width:97px; height:100%;margin-left:-4px;float:left;" class="flavor_div">
+					</div>                    
+		 		</div>
+		 	</div><!-- /.center-container-->
+		</div>
+	</div>
+		<script type="text/javascript">
+		
+		
+		$('.flavor_div').mouseenter(function(){
+			single = 'singleline';
+			if ((this.id) == 'snapfrost') 
+			{
+				text = 'SNAP<br>FROST</span>';
+				single = '';
+			}
+			if ((this.id) == 'peach') text = 'PEACH';
+			if ((this.id) == 'coconut') text = 'COCONUT';
+			if ((this.id) == 'redberry') text = 'RED BERRY';
+			
+			$('#'+this.id).html('<a href="#!/intro'+this.id+'" id="pop-'+this.id+'" class="circleLearnMore '+single+'"><span>'+text+'</span></a>');
+			$('#pop-'+this.id).stop(true,true).delay(100).fadeIn(300).addClass('active');
+				
+		});
+		$('.flavor_div').mouseleave(function(){
+			$('#'+this.id).html('');
+			$('#pop-'+this.id).delay(100).fadeOut(300).removeClass('active');
+				
+		});	
+		
+		</script>

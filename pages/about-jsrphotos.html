@@ -1,0 +1,40 @@
+			<div class="center-container about about-jsrphotos">
+		 		<h3>
+		 			Jean-Sebastian Robiquet
+		 		</h3>
+		 		<div class="sublinks">
+					<a href="#!/about-jsr">Bio</a>
+					<a href="#!/about-jsrphotos" class="active">Photos</a>
+				</div>
+		 		
+		 		<div class="carousel-container">
+			 		<div class="carousel">
+			 			<li><img src="img/about/jsrphotos/a_ciroc_tasting_in_nyc-0.jpg" height="100%"></li>
+			 		</div>
+		 			<a href="javascript:void();" class="carousel-sprite prev"></a><a href="javascript:void();" class="carousel-sprite next"></a>
+
+		 		</div>
+		 		
+		 	</div><!-- eo center-container-->
+		 	
+<script type="text/javascript"> 
+ 
+    var $ss = $('.carousel'); 
+         
+    // add slides to slideshow (images 2-8) 
+    for (var i = 1; i < 6; i++) 
+        $ss.append('<li><img src="img/about/jsrphotos/a_ciroc_tasting_in_nyc-'+i+'.jpg" height="100%"/></li>'); 
+ 
+    // start the slideshow 
+    $ss.cycle({ 
+    	fx:"fade",
+    	sync:0, 
+        timeout:0,
+        speed: 300,
+        pause:1,
+        next:'a.next',
+        prev:'a.prev'
+       
+    }); 
+ 
+</script> 

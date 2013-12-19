@@ -1,0 +1,3 @@
+body{ height:100%; overflow: hidden; margin: 0;}
+.nojs{display:block;position:absolute;top:0;left:0;width:100%;height:100%;background-color: #000;z-index: 1000;}
+.nojs-content{display:block;position:absolute;top:40%;left:35%;wid th:350px; text-align: center; }
