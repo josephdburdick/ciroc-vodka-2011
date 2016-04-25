@@ -1,8 +1,8 @@
 <?php
-$mysql_host = 'db398792411.db.1and1.com';
-$mysql_user = 'dbo398792411';
-$mysql_password = 'sgc12345';
-$mysql_database = 'db398792411';
+$mysql_host = 'db398792411.db.1and1.com';log/log-id
+$mysql_user = 'dbo398792411';log/log-id
+$mysql_password = 'sgc12345';log/log-id
+$mysql_database = 'db398792411';log/log-id
 
 @mysql_connect($mysql_host, $mysql_user, $mysql_password);
 @mysql_select_db($mysql_database);
